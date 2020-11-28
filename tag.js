@@ -31,7 +31,7 @@ router.post('/', function(req, res) {
 router.post('/bulk', function(req, res) {
   var promises = [];
   for (var i=0; i<req.body.length; i++) {
-    promises.push(model_tag.updateOrCreate(req.body[i]))
+    promises.push(model_tagss.updateOrCreate(req.body[i]))
   }
 
   Q
