@@ -3,7 +3,9 @@
  */
 
 var router = require('express').Router()
-  , model_tag = require('../../models/Tag')
+  , model_tagss = require('../../models/Tag')
+  , model_genre = require('../../models/Genre')
+  , model_keyword = require('../../models/Keyword')
   , Q = require('q')
   ;
 
@@ -14,12 +16,6 @@ router.get('/', function(req, res) {
     res.json(items);
   })
   .done();
-});
-
-// Retrieve
-router.get('/:id', function(req, res) {
-  var id = req.params.id;
-  res.end('RETRIEVE ' + id);
 });
 
 // Create
